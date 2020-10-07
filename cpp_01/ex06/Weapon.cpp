@@ -6,7 +6,7 @@
 /*   By: tbruinem <tbruinem@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/07/29 14:53:29 by tbruinem      #+#    #+#                 */
-/*   Updated: 2020/07/29 16:01:18 by tbruinem      ########   odam.nl         */
+/*   Updated: 2020/10/07 14:15:09 by tbruinem      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,17 +23,11 @@ void	Weapon::setType(const std::string& type)
 	this->_type = type;
 }
 
-Weapon::Weapon()
-{
-
-}
+Weapon::Weapon() {}
 
 Weapon::Weapon(const std::string& weaponType)
 {
 	this->_type = weaponType;
 }
 
-Weapon::~Weapon()
-{
-
-}
+Weapon::~Weapon() {}
