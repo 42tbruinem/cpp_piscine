@@ -1,35 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   phonebook.cpp                                      :+:    :+:            */
+/*   HumanA.hpp                                         :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: tbruinem <tbruinem@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/07/27 16:42:03 by tbruinem      #+#    #+#                 */
-/*   Updated: 2020/09/30 13:07:03 by tbruinem      ########   odam.nl         */
+/*   Created: 2020/07/29 14:55:21 by tbruinem      #+#    #+#                 */
+/*   Updated: 2020/10/07 14:06:59 by tbruinem      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef HUMAN_A_HPP
+# define HUMAN_A_HPP
+
 #include <iostream>
-#include <iomanip>
-#include "phonebook.class.hpp"
-#include "contact.class.hpp"
+#include "Weapon.hpp"
 
-int		main(void)
+class HumanA
 {
-	phonebook myPhonebook;
+	private:
+		Weapon& _weapon;
+		std::string _name;
+	public:
+		HumanA(const std::string& name, Weapon& weapon);
+		~HumanA();
+		void attack(void);
+};
 
-	std::string command = "";
-	while (command.compare("EXIT"))
-	{
-		std::cout << "Phonebook > ";
-		if (!command.compare("ADD"))
-			myPhonebook.add();
-		else if (!command.compare("SEARCH"))
-			myPhonebook.search();
-		getline(std::cin, command);
-		if (std::cin.eof())
-			break ;
-	}
-	return (0);
-}
+#endif

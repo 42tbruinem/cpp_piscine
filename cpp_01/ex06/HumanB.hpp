@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   phonebook.class.hpp                                :+:    :+:            */
+/*   HumanB.hpp                                         :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: tbruinem <tbruinem@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/07/27 16:46:08 by tbruinem      #+#    #+#                 */
-/*   Updated: 2020/07/27 20:01:58 by tbruinem      ########   odam.nl         */
+/*   Created: 2020/07/29 14:55:21 by tbruinem      #+#    #+#                 */
+/*   Updated: 2020/10/07 14:04:08 by tbruinem      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_CLASS_HPP
-# define PHONEBOOK_CLASS_HPP
+#ifndef HUMAN_B_HPP
+# define HUMAN_B_HPP
 
 #include <iostream>
-#include "contact.class.hpp"
+#include "Weapon.hpp"
 
-class phonebook
+class HumanB
 {
 	private:
-		contact contacts[8];
-		static int contactAmount;
-
+		Weapon* _weapon;
+		std::string _name;
+		HumanB();
 	public:
-		int	getContactAmount(void);
-		void add(void);
-		void search(void);
-		phonebook();
-		~phonebook();
+		HumanB(const std::string& name);
+		~HumanB();
+		void setWeapon(Weapon& weapon);
+		void attack(void);
 };
 
 #endif

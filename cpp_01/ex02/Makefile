@@ -6,12 +6,12 @@
 #    By: tbruinem <tbruinem@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/07/27 16:25:13 by tbruinem      #+#    #+#                  #
-#    Updated: 2020/10/07 13:45:17 by tbruinem      ########   odam.nl          #
+#    Updated: 2020/10/07 13:51:40 by tbruinem      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Pony
-SRC = Pony.cpp main.cpp
+NAME = Zombie
+SRC = Zombie.cpp ZombieEvent.cpp main.cpp
 OBJ = $(SRC:%.cpp=%.o)
 CFLAGS = -Wall -Wextra -Werror -pedantic -std=c++98
 

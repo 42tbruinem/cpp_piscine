@@ -1,36 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   main.cpp                                           :+:    :+:            */
+/*   Pony.cpp                                           :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: tbruinem <tbruinem@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/07/27 16:03:40 by tbruinem      #+#    #+#                 */
-/*   Updated: 2020/07/27 16:24:01 by tbruinem      ########   odam.nl         */
+/*   Created: 2020/07/28 17:06:56 by tbruinem      #+#    #+#                 */
+/*   Updated: 2020/10/07 13:52:45 by tbruinem      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <cstring>
-#include <cctype>
+#include "Pony.hpp"
 
-int	main(int argc, char **argv)
+Pony::Pony() {}
+
+Pony::Pony(int age, const std::string& name, const std::string& color, const std::string &trait)
 {
-	if (argc == 1)
-	{
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-		return (1);
-	}
-	std::string tmp;
-	for (int i = 1; i < argc; i++)
-	{
-		tmp = argv[i];
-		for (int j = 0; j < (int)tmp.length(); j++)
-		{
-			tmp[j] = std::toupper(tmp[j]);
-		}
-		std::cout << tmp;
-	}
-	std::cout << std::endl;
-	return (0);
+	this->_age = age;
+	this->_name = name;
+	this->_color = color;
+	this->_trait = trait;
+	std::cout << "Along comes " << this->_name << ", a " << this->_color << ", " << this->_trait << " pony." << std::endl;
+}
+
+Pony::~Pony()
+{
+	std::cout << this->_name << " turned into horse meat" << std::endl;
 }
